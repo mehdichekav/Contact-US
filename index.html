@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h2>Contact Us</h2>
+            <form action="">
+                <div class="form-control">
+                    <div class="split">
+                        <div class="form-split">
+                            <label>First Name</label>
+                            <input type="text" class="first-name">
+                            <p class="error"></p>
+                        </div>
+                        <div class="form-split">
+                            <label>Last Name</label>
+                            <input type="text" class="last-name">
+                            <p class="error"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label>Email Address</label>
+                    <input type="email" class="email">
+                    <p class="error"></p>
+                </div>
+                <div class="radio-control">
+                    <label>Query Type</label>
+                    <div class="radio-controls">
+                        <div class="split-radio ">
+                            <input type="radio" name="query" value="Genral Equiry" class="btn-radio">
+                            <span>Genral Query</span>
+                        </div>
+                        <div class="split-radio">
+                            <input type="radio" name="query" value="Suport Requests" class="btn-radio">
+                            <span>Suport Request</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label>Message</label>
+                    <div class="message">
+                        <textarea rows=5" class="txt-message"></textarea>
+                    </div>
+                    <p class="error"></p>
+                </div>
+                <div class="terms">
+                    <div class="terms-wrapper">
+                        <input type="checkbox" class="termsCondition">
+                    </div>
+                    <p>I consent to begin contacted by the team</p>
+                    <p class="error"></p>
+                </div>
+                <button>submit</button>
+            </form>
+        </div>
+    </div>
+   
+    
+   
+    <script src="./app.js"></script>
+</body>
+</html>
