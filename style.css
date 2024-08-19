@@ -149,20 +149,21 @@ form button:focus {
     color: var(--Red);
 }
 
- /* @media(min-width:375px) and (max-width:425px) {
+ @media(min-width: 375px) and (max-width: 425px) {
     .wrapper {
         padding: 1rem;
+       
     }
+    .form-control,
+    .form-control .split,
+    .form-split,
+    .radio-controls {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .split .form-split input {
+        width: 100%;
+    }  
 }
 
-.form-control,
-.form-control .split,
-.form-split,
-.radio-controls {
-    display: grid;
-    grid-template-columns: 1fr;
-}
 
-.split .form-split input {
-    width: 100%;
-}   */
