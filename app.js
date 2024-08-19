@@ -11,8 +11,10 @@ const termswrapper = document.querySelector(".terms-wrapper");
 
 formEl.addEventListener("submit", (event) => {
     event.preventDefault();
-    errorHandle();
+        errorHandle();
 });
+
+
 
 function errorHandle() {
     const firstName = firstNEl.value.trim();
@@ -21,10 +23,11 @@ function errorHandle() {
     const textmessage = messageEl.value.trim();
 
     if (firstName === '') {
-        
         showError(firstNEl, showErrorMessage());
     }else {
         setSuccess(firstNEl);
+        firstNEl.inputControl=''
+        
     }
 
     if (lastName === '') {
@@ -34,18 +37,20 @@ function errorHandle() {
         setSuccess(lastNEl);
     }
 
-    if (email === "") {
+    if (email === '') {
         showError(emailEl, showErrorMessage())
     }else if(!isvalidEmail(email)){
         showError(emailEl, "please Enter Valid Email");
     }else {
         setSuccess(emailEl);
     }
+    
 
     if (textmessage === '') {
         showError(messageParent, showErrorMessage());
     }else {
         setSuccess(messageParent);
+        Alert('success','thanks for completing form.well be in touch soon!','info')
     }
 }
 
@@ -56,12 +61,12 @@ function checkBoxHandle(){
             if(radio.checked == true){
                 radio.parentElement.classList.add("active");
             }
-
-            
         })
     })
 }
+
 checkBoxHandle()
+
 const showError = (ele, msg) => {
     const inputControl = ele.parentElement;
     const errorMessage = inputControl.querySelector(".error");
@@ -74,7 +79,7 @@ const setSuccess = (ele) => {
     const inputControl = ele.parentElement;
     const errorMessage = inputControl.querySelector(".error");
     errorMessage.innerText= "";
-    inputControl.classList.remove("errormessage")
+    inputControl.classList.remove("errormessage");  
 };
 
 
